@@ -1,0 +1,119 @@
+<html>
+<header>
+    <ul>
+      <li><a href="/home/gouda/Desktop/Website/login.html">Entry</a></li>
+      <li><a class="active" href="/home/gouda/Desktop/Website/netsec.html">Network Security</a></li>
+      <li><a href="/home/gouda/Desktop/Website/research.html">Research</a></li>
+      <li><a href="/home/gouda/Desktop/Website/linux.html">Linux</a></li>
+      <li><a href="/home/gouda/Desktop/Website/arduino.html">Arduino</a></li>
+      <li><a href="/home/gouda/Desktop/Website/contact.html">Contact Us</a></li>
+      <li><a href="/home/gouda/Desktop/Website/aboutme.html">About Me</a></li>
+      <li><a href="/home/gouda/Desktop/Website/course.html">Courses</a></li>
+    </ul>
+  <link rel="stylesheet" Type="text/css" href="/home/gouda/Desktop/Website/login.css"></a>
+</header>
+<h4><center>{~}Introduction to Network Security{~}</center></h4>
+<p><font size="2">
+  Moving into a new residence with network and hardware vulnerabilities exacerbated the need to learn more about IT and NetSec. With no prior knowledge of internet networking, all the protocols seemed daughting.
+  UDP, ICMP, TCP, SSH, IPv4/IPV6, IPSec, DNS, Proxy, Reverse Proxies, where does it end? Does it even end? Do not fret, let's <b>simplify</b> all the craziness. The table below gives a brief overview of the OSI Model or the Open Systems Interconnection Model.
+  These layers are where all computer communication takes place.
+</p>
+<div>
+    <center><table style="width:90%"><border size="1">
+      <th>Layer</th><th>Name</th><th>Examples/Protocol</th><tr>
+        <td>1</td><td> Application </td><td> HTTP, FTP, SMTP</td><br></tr><tr>
+          <td>2</td><td> Presentation </td><td> JPEG, GIF, MPEG</td><br></tr><tr>
+            <td>3</td><td> Session </td><td> Appletalk, Winsock, SSH</td><br></tr><tr>
+              <td>4</td><td> Transport </td><td> TCP, UDP</td><br></tr><tr>
+                <td>5</td> <td> Network </td><td> IP, ICMP</td><br></tr><tr>
+                  <td>6</td> <td> Data Link </td><td> Ethernet,ATM </td><br></tr><tr>
+                    <td>7</td> <td> Physical </td><td> Physical components</td><br></tr>
+                  </table></center>
+</div>
+                  <p><font size="2" class="Times">
+                    Understanding the flow of internet traffic is great for troubleshooting problems in the network. In order for computers to commiuncate with each other they need to have a unique identifier, a way for each device to be distinguished separately.
+                    These unique identifiers are assigned by a router provided by your ISP. All network traffic needs to be filtered, generally, through one location. The router catalogs every device in promixity with an IPv4 or IPv6 IP address. The figure below gives a brief overview of the IP protocol.
+                    <center><table style="width:90%"><border size="1" font size="0.5">
+                      <th>Protocol</th><th>Details</th><th>Example</th><tr>
+                        <td>IPv4</td><td>4 octets w/ 32-bit numbers</td><td>192.168.1.1</td><br></tr><tr>
+                          <td>IPv6</td><td>6 octets w/ 128-bit alphanumeric</td><td>2001:4fd0:3850:38g4:876d:38fd</td><br></tr><tr>
+                          </table></center></p>
+                  <p><font size="2" class="Times">
+                    After each device is assigned with an IP address, it allows the cross communication with devices and the internet. The traffic is filtered through the router and off to the ISP to goes. Everytime a request is made through the internet (Think of visiting a website, streaming music, searching for an image, sending an email, etc) a connection must take place initially.
+                    Whenever an image or a link on a website is clicked a request is made. There are many different protocols, ICMP, TCP, UDP, ARP, to name a few. The table below gives a brief description of the most known internet protocols.
+                  </p>
+                  <center><table style="width:90%" id="OSI"><font size="1">
+                    <th>Abreviation</th><th>Name</th><th>Description</th><tr>
+                      <td>ICMP</td><td>Internet Control Message Protocol </td><td>communication between apps.</td><br></tr><tr>
+                        <td>TCP</td><td> Transmission Control Protocol </td><td>errors and statistics (connection confirmation).</td><br></tr><tr>
+                          <td>UDP</td><td> User Datagram Protocol </td><td>communication between apps.</td><br></tr><tr>
+                              <td>IP</td><td>Internet Protocol</td><td>communication between devices.</td><br></tr><tr>
+                                <td>ARP</td><td>Address Resolution Protocol</td><td>used by IP to find hardware.</td><br></tr><tr>
+                                </table></center></font>
+</div>
+
+      <h4><b>{~}WireShark{~}</b></h4>
+             <p><font size="2" class="Times">
+                            Wireshark is a free network traffic sniffer. Every packet that traverses a personal network can be sniffed with this tool. Wireshark has a highly functional graphical interface with searching funcationality and color rules, a good comparsion would be TCPdump. The source code can be found <a href="www.github.com/wireshark/wireshark">here.</a> It is best practice to configure Wireshark approprately, after searching far and wide throughout the interwebs, this useful guide on how to setting up Wireshark was found. So now you're probably wondering, how do I get this sweet piece of technology? Well if you are on Linux the installation process requires a couple more steps, to be configured properly. However, if you would like to download the software <a href="www.wireshark.com/download">here.</a> If you are having any issues installing Wireshark on a Linux box, I found the below information useful. The integrity of these packages and libraries may be questionable (open-source woot), but they work. Try adding the specified respository (add-apt-repository ppa:wireshark-dev/stable) and the desired prerequistes, these can be installed with "apt-get install checkinstall + x*" (x*= libcurl14, openssl-dev, bison, flex, qt5default, qttools5-dev, libssl-dev, libgtk-3-dev, libpcap-d). It is best practice to obtain a baseline of the network traffic in order to compare it and find anomalies. A great step-by-step process to configure Wireshark can be found <a href="www.wireshark.org/#learnWS">here</a>. This baseline will help get a realistic picture on how noisy internet traffic can be. The user manual for WireShark can be found <a href="www.wireshark.org/docs/wsug_html">here.</a>
+                          </p>
+
+
+      <h4><b>{~}Nexxus{~}</b></h4>
+              <p><font size="2" class="Times">
+                            <a href="">Nexxus</a> is a great utility for Website Penetration testing. This piece of software, although free, does offer
+                            a wide variety of vulnerability test scans for website domains. XSS attacks, clickjacking, SQL injection, etc. Nexxus is also a great tool to harden a web domain.
+                            The utility offers warnings and recommendations in order to harden the web domain under scrutiny. There There are many different computer languages that go into crafting a webtsite.
+                            There is also a lot of cross communication between these languages on a client and server side. These different types of communication allow for a functioning domain. Below is a list of a few languages.
+                            <br>
+
+    <ul>
+                              <li><u>HTML</u> (Hyper Text Markup Language): base frame of website.</li>
+                              <li><u>CSS</u> (Cascading Style Sheet): styling for website.</li>
+                              <li><u>PHP</u> (Personal Home Page): client to server means for comminucation.</li>
+                              <li><u>Javascript</u> - extra functionality to a website.</li>
+                            </ul>
+                            <p><font size="2" class="Times">
+                              The above list shows the more known languages of webdev. Unfortunately, Javascript is notoriously known for bugs. Luckily for Linux, everything is considered to be it's own file. This is great for a security stand point, it makes worms and viruses more difficult to proliferate. It's a brilliant means to compartamentalize.
+                              To get a better understanding for these languages check out this post here to contiune <a href="">reading</a>, or if your interest is setting up a Website, this <a href="">research post</a> goes in depth about Domain names, hosting, setting up a blog and great companies to choose from.</p>
+
+
+      <h4><b><center>{~}ClamAV{~}</b></h4>
+                            <p><font size="2" class="Times">
+                              You're probably not as paranoid but I found this utility rather useful. This can be installed with "apt-get install clamav" but requires a couple of steps to get ClamAV to run properly.
+
+                              <center><img src="/home/gouda/Desktop/Website/clammany.png"><br><br></center>
+                              <p><font size="2" class="Times">
+                                Another amazing feat of ClamAV is it does not have to scan the entire computer system, with the ability to scan directories and individual files, ClamAV gives a range of security, from a system wide scan to a sketchy file downloaded from the interwebs. <br> <br>
+                            </p>
+                              <center><img src="/home/gouda/Desktop/Website/clam1.png"><br></center>
+                            <p><font size="2" class="Times">
+                              Below are some of the hiccups I had during install. ClamAV is a rather simple install "sudo apt install Clamav". Unfortunately, there are a couple steps to get this service up and running. I have found that after the apt install a serivce named "freshclam" begins to run.
+                              This is a script to check to see if ClamAV is up to date and a quick configuratioin with the system hardware. After install if the command "ps aux | grep freshclam" is executed you will notice it running. The only way I could get freshclam to work is completely restart the freshclam service.
+                              "sudo pkill -15 -x freshclam" was used to stop the freshclam scan and then "sudo freshclam" allowed for the update of ClamAV. Another hiccup I came across was <a href="">clamscan needs access" I had to change the UID to 125 and the GUIDD to 127</a>
+                            </p>
+                              <h4> Helpful ClamAV commands</h4>
+                            <p><font size="2" class="Times">
+                              After creating a directory for ClamAV (sudo mkdir ~/Desktop/ClamScan) you have the abililty to scan and send all of the suspect files to a folder. Linux everything is set up as it's own file. This is extremely beneficial for various reasons. This makes it much more difficult for the spread of viruses. Linux allows you can contain the suspect files in an almost quaratined folder.
+                              With the proper persmissions set for this directory it isolates the files away from the system. I setup a <a href="">Crontab</a> in order for ClamAV to run at 3am once a week.
+                            </p>
+                              <center><img src="/home/gouda/Desktop/Website/crontab.png"><br></center>
+                            <p><font size="2" class="Times">
+                              The crontab above will run clamscan with -r which will remove the files. The next piece "--move=" will move the suspect files. "~/Desktop/ClamScan" will be the location to send the files and "/*" specifies ClamAV to scan the entire root directory.
+      <h4><b><center>{~}Lynis{~}</center></b></h4>
+                            <p><font size="2" class="Times">
+                              Lynis is a great utility that will scan or audit a computer system and like Nexxus, Lynis will return recommendations, warnings, and ways to harden the current system.
+                              As you can see from the screenshot, this utitlity shows how bad I am at setting up user permissions. My favorite part about Lynis is at the end of it's diagnostic testing, it spits out a "Hardening Index".
+                              An enjoyable and extremely productive game I like to play is trying to obtain the highest possible "Hardening Index" score.<br>
+                              <center><img src="/home/gouda/Desktop/Website/lynisusr.png"><br></center>
+                            </p>
+                            <p><font size="2" class="Times">
+                              The above photo shows the current box has an Hardening index of 55. The highest I have achieved with is a 73.<br></p>
+                              <center><img src="/home/gouda/Desktop/Website/lynisscore.png"><br></center>
+
+                              <h2><b>{~}Take Home Message{~}</b></h2>
+                              <p><font size="2" class="Times">
+                                The main take home message for this page is a brief introduction to networking. One of the greatest traits about network security, in my opinion, is that there is so much to study. The more you read about a topic in tech, the more questions you have. IT does take a curious mind, people who love to learn new things would fit perfect in IT.
+                              </p>
+
+      </body>
+</html>
