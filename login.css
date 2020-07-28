@@ -1,0 +1,111 @@
+    /* add color to the top nav bar */
+.topnav {
+    background-color: yellow;
+    overflow: hidden;}
+
+    /* style the links in nav bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: black
+    text-align: center;
+    padding: 12px 13px;
+    text-decoration: none;
+    font-size: 12px;}
+
+    /*blinking text <h1>*/
+.a1, .a2{
+    animation:blinking 2s infinite;
+    font-size:24;
+    font-family: arial;}
+
+@keyframes blinking{
+   0%{  color: gold;   } 
+   47%{  color: #000;   } 
+   62%{  color: transparent;    } 
+   97%{  color: transparent;    } 
+   100%{  color: #000;  }}
+
+body{
+  background-color: lightyellow;
+  background-image: url("");
+  overflow: hidden;}
+
+h4{
+  border-left: 2px dashed gold;
+  border-bottom: 2px dashed gold;
+  background-color: lightyellow;
+  opacity: 0.8;
+  align-content: center;}
+
+h1{
+   border-left: 2px dashed gold;
+   border-bottom: 2px dashed gold;
+   background-color: lightyellow;
+   opacity: 0.8;
+   align-content: center;
+   color: green;}
+
+h2{
+   border-left: 2px dashed gold;
+   border-bottom: 2px dashed black;
+   background-color: #ffedff;
+   opacity: 0.8;
+   align-content: center;}
+
+h3{
+   border-left: 2px dashed gold;
+   border-bottom: 2px dashed gold;
+   background-color: lightyellow;
+   opacity: 0.8;
+   align-content: center;}
+
+form{
+  border:2px;
+  border-color: gold;}
+
+p{
+  font-family: arial;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15;}
+
+table, th, td{
+  border: 1px solid purple;
+  font-size: 13px;
+  font-family: arial;
+  padding-right: 1px;
+  padding-left: 1px;} 
+
+img{
+  align: center;}
+
+ul{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  font-size:14px;
+  background-color:lightyellow;
+  font-style: oblique;
+  font-family: cursive;
+  border-left: 2px dashed gold;
+  border-bottom: 2px dashed gold;}
+
+.active{
+  background-color: lightyellow;
+  border-left: dashed;
+  border-color: gold;}
+  
+li{
+    float: left;}
+
+li a{
+  display:block; 
+  color: Black; 
+  text-align:center;
+  padding: 10px 10px;
+  text-decoration:none;}
+
+li a:hover{
+  background-color:lightyellow;}
